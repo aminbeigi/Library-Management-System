@@ -1,7 +1,7 @@
 <p align="center">
 <img src="https://i.imgur.com/BgtsuAF.png" height="110px" width="auto"/>
 <br/>
-<h3 align="center">Tic-Tac-Toe</h3>
+<h3 align="center">Library Management System</h3>
 <p align="center">An object oriented design for a library management system.</p>
 <h2></h2>
 </p>
