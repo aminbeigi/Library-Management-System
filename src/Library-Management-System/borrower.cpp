@@ -1,10 +1,8 @@
 #include <iostream>
 #include <string>
-
 #include "borrower.h"
 
 Borrower::Borrower() {
-	std::cout << "Epic constructor" << std::endl;
 }
 
 void Borrower::set_id(int id) {
