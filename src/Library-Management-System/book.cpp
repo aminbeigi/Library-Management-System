@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "book.h"
 
 // global variable
@@ -41,6 +42,6 @@ char* Book::get_date_borrowed() {
 	return ctime(&date_borrowed);
 }
 
-unsigned int get_book_count() {
+unsigned int Book::get_book_count() {
 	return book_count;
 }
