@@ -6,14 +6,14 @@
 class Borrower {
 public:
 	Borrower();
-	void set_id(int id);
+	void set_id(unsigned int);
 	void set_name(std::string name);
-	int get_id();
+	unsigned int get_id();
 	std::string get_name();
 	
 private:
 	std::string name;
-	int id = 0;
+	unsigned int id = 0;
 };
 
 #endif

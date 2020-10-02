@@ -5,7 +5,7 @@
 Borrower::Borrower() {
 }
 
-void Borrower::set_id(int id) {
+void Borrower::set_id(unsigned int id) {
 	this->id = id;
 }
 
@@ -13,7 +13,7 @@ void Borrower::set_name(std::string name) {
 	this->name = name;
 }
 
-int Borrower::get_id() {
+unsigned int Borrower::get_id() {
 	return this->id;
 }
 
