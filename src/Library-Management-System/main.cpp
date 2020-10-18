@@ -29,7 +29,7 @@ int main() {
 	book2->set_title("Sign of the Burnt Tuba");
 	book3->set_item_number("102");
 	book3->set_author("Opal Mac");
-	book3->set_title("Electrical Light");
+	book3->set_title("cat");
 
 	std::list<Book> books = { *book1, *book2, *book3 };
 
@@ -38,29 +38,41 @@ int main() {
 	std::cout << "There are " << book1->get_book_count() << " books to choose from." << std::endl;
 	
 	int user_input;
+	std::string selected_book;
 	while (true) {
-		std::cout << std::string(3, '\n'); // clear screen
-		std::cout << "1) Select a book to borrow." << std::endl;
-		std::cout << "2) exit" << std::endl;
+		std::cout << "1) Display all available books." << std::endl;
+		std::cout << "2) Borrow a book." << std::endl;
+		std::cout << "3) Exit." << std::endl;
 		std::cout << "Input: ";
 		std::cin >> user_input;
-		std::cout << std::endl;
 
 		int i = 1;
 		switch (user_input) {
 		case 1: 
-			std::cout << "Book names:" << std::endl;
+			std::cout << "Books:" << std::endl;
 
 			for (std::list<Book>::iterator it = books.begin(); it != books.end(); ++it) {
 				std::cout << '\t' << i << ") " << it->get_title() << ", by ";
 				std::cout << it->get_author() << std::endl;
 				++i;
 			}
-			std::cout << "Input: ";
-			
 			break;
 
 		case 2:
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+			std::cout << "Enter a book name: " << std::endl;
+			std::getline(std::cin, selected_book);
+			for (std::list<Book>::iterator it = books.begin(); it != books.end(); ++it) {
+				if (it->get_title() == selected_book) {
+					book3->set_date_borrowed(time(0));
+					std::cout << book3->get_date_borrowed();		
+				}
+			}
+			break;
+
+		case 3:
 			std::cout << "Exiting the program..." << std::endl;
 			return 0;
 
@@ -71,7 +83,8 @@ int main() {
 
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
+		selected_book.erase();
+		std::cout << std::string(1, '\n'); // clear screen
 	}
 
 	delete book1;
