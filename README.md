@@ -10,7 +10,7 @@
 <p align="center">
 <a href="../../issues"><img src="https://img.shields.io/github/issues/aminbeigi/Library-Management-System.svg?style=flat-square" /></a>
 <a href="../../pulls"><img src="https://img.shields.io/github/issues-pr/aminbeigi/Library-Management-System.svg?style=flat-square" /></a>
-<img src="https://img.shields.io/github/license/aminbeigi/Password-Manager?style=flat-square">
+<img src="https://img.shields.io/github/license/aminbeigi/Library-Management-System?style=flat-square">
 </p>
 
 ## Description
